@@ -3,7 +3,7 @@
 
 .appWrapper {
 	background-image: url('../assets/background.jpg');
-	height: 100vh;
+	min-height: 100vh;
 	@media (min-width: 576px) {
 		padding-top: rem-calc(143);
 	}

@@ -1,0 +1,38 @@
+@import '../../scss/bootstrap/variables';
+@import '../../scss//custom/mixins';
+
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	@media (max-width: 991px) {
+		margin-bottom: rem-calc(100);
+	}
+	@media (min-width: 992px) {
+		min-height: rem-calc(170);
+		margin-bottom: rem-calc(150);
+	}
+	&__name {
+		font-size: rem-calc(20);
+		color: $primary;
+		font-family: 'bold';
+	}
+	&__manufacturer {
+		font-size: rem-calc(14);
+	}
+	&__credits {
+		border-bottom: 1px solid $primary;
+		display: flex;
+		align-items: center;
+		min-height: rem-calc(25);
+		margin-top: rem-calc(10);
+		&_info {
+			margin-right: rem-calc(10);
+		}
+		&_price {
+			font-size: rem-calc(20);
+			color: $primary;
+			font-family: 'bold';
+		}
+	}
+}

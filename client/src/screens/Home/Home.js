@@ -1,19 +1,18 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
+import React from 'react'
+import { Container } from 'react-bootstrap'
 import Products from '../../components/Products/Products'
+import { ProductsContextProvider } from '../../context/ProductsContext'
 
 const Home = () => {
 	return (
 		<main>
 			<Container>
-				<Row>
-					<Col>
-						<Products />
-					</Col>
-				</Row>
+				<ProductsContextProvider >
+					<Products />
+				</ProductsContextProvider>
 			</Container>
 		</main>
-	);
-};
+	)
+}
 
-export default Home;
+export default Home

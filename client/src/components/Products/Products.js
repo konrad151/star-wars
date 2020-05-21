@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react'
+import { Row } from 'react-bootstrap'
+import { ProductsContext } from '../../context/ProductsContext'
+import ProductItem from '../ProductItem/ProductItem'
 
 const Products = () => {
-	return (
-		<>
-			<h2>Products</h2>
-		</>
-	);
-};
+	const { products } = useContext(ProductsContext)
 
-export default Products;
+	const renderProducts = () => {
+		return (
+			products.map((item, index) => {
+				return (
+					<ProductItem
+						key={index}
+						item={item}
+					/>
+				)
+			})
+		)
+	}
+
+	return (
+		<Row>
+			{renderProducts()}
+		</Row>
+	)
+}
+
+export default Products
