@@ -1,0 +1,54 @@
+@import '../../scss/bootstrap/variables';
+@import '../../scss/custom/mixins';
+
+.header {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	z-index: 1;
+	background: white;
+	padding: rem-calc(20 0);
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+	box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+	@media (max-width: 575px) {
+		padding-bottom: 0;
+	}
+	&__logo {
+		font-family: 'starjedi';
+		color: $primary;
+		font-size: rem-calc(36);
+		@media (max-width: 575px) {
+			text-align: center;
+		}
+	}
+	&__nav {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		font-size: rem-calc(18);
+		height: 100%;
+		@media (max-width: 575px) {
+			justify-content: center;
+		}
+	}
+	&__navItem {
+		font-family: 'Medium';
+		color: $primary;
+		margin-right: rem-calc(20);
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			color: $primary;
+		}
+		@media (max-width: 575px) {
+			padding: rem-calc(30);
+			margin-right: 0;
+		}
+		&_shoppingCart {
+			cursor: pointer;
+		}
+	}
+}
