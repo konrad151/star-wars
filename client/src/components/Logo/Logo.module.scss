@@ -1,0 +1,14 @@
+@import '../../scss/bootstrap/variables';
+@import '../../scss/custom/mixins';
+
+.logo {
+	font-family: 'starjedi';
+	color: $primary;
+	font-size: rem-calc(60);
+	padding-left: 15px;
+	margin-bottom: 0;
+	@media (max-width: 767px) {
+		text-align: center;
+		font-size: rem-calc(45);
+	}
+}

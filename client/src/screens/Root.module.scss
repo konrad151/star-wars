@@ -3,11 +3,5 @@
 
 .appWrapper {
 	background-image: url('../assets/background.jpg');
-	min-height: 100vh;
-	@media (min-width: 576px) {
-		padding-top: rem-calc(143);
-	}
-	@media (max-width: 575px) {
-		padding-top: rem-calc(188);
-	}
+	min-height: calc(100vh + 1px);
 }

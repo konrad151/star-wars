@@ -1,23 +1,22 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import classNames from 'classnames'
 import styles from './Header.module.scss'
+import Logo from '../Logo/Logo'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
-	var shoppingCartClass = classNames(styles.header__navItem, styles.header__navItem_shoppingCart)
-
 	return (
 		<header className={styles.header}>
 			<Container>
 				<Row>
-					<Col xs={12} sm={'auto'}>
-						<h1 className={styles.header__logo}>Star Wars</h1>
+					<Col xs={12} sm={12} md={'auto'}>
+						<Logo />
 					</Col>
-					<Col xs={12} sm>
+					<Col xs={12} sm={12} md>
 						<nav className={styles.header__nav}>
-							{/* uncomment below line and import Link from react-router-dom to add more link nav items */}
-							{/* <Link to={'#!'} className={styles.header__navItem}>TestNavLink</Link> */}
-							<div className={shoppingCartClass} onClick={() => console.log('clicked')}>shoppingCart</div>
+							<Link to={'#!'} className={styles.header__navItem}>TestNavLink</Link>
+							<Link to={'#!'} className={styles.header__navItem}>TestNavLink</Link>
+							<Link to={'#!'} className={styles.header__navItem}>TestNavLink</Link>
 						</nav>
 					</Col>
 				</Row>

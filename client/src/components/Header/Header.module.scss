@@ -2,26 +2,11 @@
 @import '../../scss/custom/mixins';
 
 .header {
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-	z-index: 1;
-	background: white;
+	margin-bottom: rem-calc(100);
 	padding: rem-calc(20 0);
-	-webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
-	-moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
-	box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
-	@media (max-width: 575px) {
+	@media (max-width: 767px) {
 		padding-bottom: 0;
-	}
-	&__logo {
-		font-family: 'starjedi';
-		color: $primary;
-		font-size: rem-calc(36);
-		@media (max-width: 575px) {
-			text-align: center;
-		}
+		margin-bottom: rem-calc(50);
 	}
 	&__nav {
 		display: flex;
@@ -29,8 +14,12 @@
 		align-items: center;
 		font-size: rem-calc(18);
 		height: 100%;
-		@media (max-width: 575px) {
-			justify-content: center;
+		@media (max-width: 767px) {
+			justify-content: flex-start;
+    		overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+			margin-left: -15px;
+			margin-right: -15px;
 		}
 	}
 	&__navItem {
@@ -43,12 +32,9 @@
 		&:hover {
 			color: $primary;
 		}
-		@media (max-width: 575px) {
+		@media (max-width: 767px) {
 			padding: rem-calc(30);
 			margin-right: 0;
-		}
-		&_shoppingCart {
-			cursor: pointer;
 		}
 	}
 }

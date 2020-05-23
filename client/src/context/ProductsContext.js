@@ -20,7 +20,7 @@ export const ProductsContextProvider = ({ children }) => {
 
 	const fetchProducts = async () => {
 		try {
-			const res = await starWars.post('/', {query: QUERIES.FETCH_STARSHIPS_QUERY})
+			const res = await starWars.post('/', { query: QUERIES.FETCH_STARSHIPS_QUERY })
 			dispatch({
 				type: 'FETCH_PRODUCTS',
 				payload: res.data.data.allStarships.starships
