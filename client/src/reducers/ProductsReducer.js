@@ -5,6 +5,11 @@ export default (state, action) => {
 			...state,
 			products: action.payload
 		}
+	case 'ADD_TO_CARD':
+		return {
+			...state,
+			shoppingCart: [...state.shoppingCart, ...action.payload]
+		}
 	default:
 		return state
 	}

@@ -30,8 +30,20 @@ export const ProductsContextProvider = ({ children }) => {
 		}
 	}
 
+	const addToCard = (item, quantity) => {
+		const items = []
+		for (let i = 1; i <= quantity; i++) {
+			items.push(item)
+		}
+		console.log(items)
+		dispatch({
+			type: 'ADD_TO_CARD',
+			payload: items
+		})
+	}
+
 	return (
-		<ProductsContext.Provider value={{ products: state.products, shoppingCart: state.shoppingCart }}>
+		<ProductsContext.Provider value={{ products: state.products, shoppingCart: state.shoppingCart, addToCard }}>
 			{children}
 		</ProductsContext.Provider>
 	)

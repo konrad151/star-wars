@@ -1,0 +1,29 @@
+@import '../../scss/bootstrap/variables';
+@import '../../scss/custom/mixins';
+
+.shoppingCart {
+	position: fixed;
+	right: rem-calc(25);
+	bottom: rem-calc(15);
+	font-size: rem-calc(35);
+	color: $primary;
+	cursor: pointer;
+	&__quantityWrapper {
+		width: rem-calc(25);
+		height: rem-calc(25);
+		background: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		position: absolute;
+		top: -5px;
+		right: -5px;
+	}
+	&__quantityText {
+		font-size: rem-calc(14);
+		font-family: 'medium';
+		color: $secondary;
+		margin-top: rem-calc(-1);
+	}
+}

@@ -9,16 +9,24 @@
 		margin-bottom: rem-calc(100);
 	}
 	@media (min-width: 992px) {
-		min-height: rem-calc(170);
+		min-height: rem-calc(191);
 		margin-bottom: rem-calc(150);
 	}
 	&__name {
 		font-size: rem-calc(20);
 		color: $primary;
 		font-family: 'bold';
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;  
+		overflow: hidden;
 	}
 	&__manufacturer {
 		font-size: rem-calc(14);
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;  
+		overflow: hidden;
 	}
 	&__credits {
 		border-bottom: 1px solid $primary;
@@ -33,6 +41,26 @@
 			font-size: rem-calc(20);
 			color: $primary;
 			font-family: 'bold';
+		}
+	}
+	&__form {
+		margin-top: rem-calc(10);
+		&Group {
+			margin-bottom: 0 !important;
+		}
+		&QuantityControl {
+			width: rem-calc(120) !important;
+			margin-right: rem-calc(5);
+		}
+		&Button {
+			@media (max-width: 767px) {
+				width: 100px;
+			}
+		}
+	}
+	&__unavailable {
+		@media (min-width: 768px) {
+			margin-bottom: rem-calc(48);
 		}
 	}
 }

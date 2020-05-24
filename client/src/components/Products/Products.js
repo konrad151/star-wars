@@ -8,10 +8,10 @@ const Products = () => {
 
 	const renderProducts = () => {
 		return (
-			products.map((item, index) => {
+			products.map((item) => {
 				return (
 					<ProductItem
-						key={index}
+						key={item.id}
 						item={item}
 					/>
 				)
