@@ -1,0 +1,14 @@
+@import '../../scss/custom/mixins';
+
+.products {
+	padding-bottom: rem-calc(50);
+}
+
+.btnLoad {
+	text-align: center;
+	font-family: 'bold';
+	position: absolute;
+    bottom: rem-calc(50);
+    left: 0;
+    right: 0;
+}

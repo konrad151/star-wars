@@ -47,7 +47,7 @@ const ProductItem = ({ item }) => {
 									<Col xs={'auto'}>
 										<Form.Control
 											required
-											type="text"
+											type="tel"
 											pattern="[1-9][0-9]*"
 											placeholder="Quantity"
 											autoComplete="off"

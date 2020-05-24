@@ -1,0 +1,33 @@
+@import '../../scss/custom/mixins';
+
+.loader {
+    text-align: center;
+	width: 100%;
+	position: absolute;
+    left: 0;
+	z-index: 1;
+    img {
+		width: rem-calc(120);
+		@media (max-width: 767px) {
+			width: rem-calc(80);
+		}
+		animation: rotate 1s infinite linear;
+	}
+	&__top {
+		top: 0;
+	}
+	&__bottom {
+		bottom: rem-calc(50);
+	}
+}
+
+
+
+@keyframes rotate {
+    from {
+		transform: rotate(0deg)
+	}
+    to {
+		transform: rotate(360deg)
+	}
+}

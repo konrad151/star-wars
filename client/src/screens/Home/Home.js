@@ -6,7 +6,7 @@ import ShoppingCart from '../../components/ShoppingCart/ShoppingCart'
 
 const Home = () => {
 	return (
-		<main>
+		<main style={{ position: 'relative' }}>
 			<Container>
 				<ProductsContextProvider >
 					<Products />
