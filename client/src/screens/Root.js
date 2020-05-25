@@ -9,7 +9,7 @@ import styles from './Root.module.scss'
 const Root = () => {
 	return (
 		<div className={styles.appWrapper}>
-			<BrowserRouter>
+			<BrowserRouter basename={'/star-wars'}>
 				<Header />
 				<Switch>
 					<Route path={ROUTES.HOME} exact component={Home} />
